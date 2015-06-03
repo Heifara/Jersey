@@ -21,14 +21,14 @@ public class TodoResourceTest {
 		Client client = Client.create(config);
 		WebResource service = client.resource(getBaseURI());
 		// Get XML
-		System.out.println(service.path("rest").path("todo").accept(MediaType.TEXT_XML).get(String.class));
+		System.out.println(service.path("webresources").path("todo").accept(MediaType.TEXT_XML).get(String.class));
 		// Get XML for application
-		System.out.println(service.path("rest").path("todo").accept(MediaType.APPLICATION_JSON).get(String.class));
+		System.out.println(service.path("webresources").path("todo").accept(MediaType.APPLICATION_JSON).get(String.class));
 		// Get JSON for application
-		System.out.println(service.path("rest").path("todo").accept(MediaType.APPLICATION_XML).get(String.class));
+		System.out.println(service.path("webresources").path("todo").accept(MediaType.APPLICATION_XML).get(String.class));
 	}
 
 	private static URI getBaseURI() {
-		return UriBuilder.fromUri("http://localhost:8080/de.vogella.jersey.jaxb").build();
+		return UriBuilder.fromUri("http://localhost:8080/webapp").build();
 	}
 }
