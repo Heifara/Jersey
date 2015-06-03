@@ -5,7 +5,6 @@ package com.maohi.software.webapp.dao;
 
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import com.maohi.software.webapp.jaxb2.Todo;
@@ -14,7 +13,7 @@ import com.maohi.software.webapp.jaxb2.Todo;
  * @author heifara
  *
  */
-public class DAOTodo {
+public class DAOTodo {	
 
 	public static DAOTodo getInstance() {
 		if (singleton == null) {
