@@ -4,6 +4,7 @@ import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.PUT;
+import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
@@ -19,6 +20,7 @@ import com.maohi.software.webapp.jaxb2.Todo;
  * @author heifara
  *
  */
+@Path("/todo")
 public class TodoResource {
 
 	@Context
@@ -29,6 +31,9 @@ public class TodoResource {
 
 	String id;
 
+	public TodoResource() {
+	}
+	
 	public TodoResource(UriInfo aUriInfo, Request aRequest, String aId) {
 		this.uriInfo = aUriInfo;
 		this.request = aRequest;
