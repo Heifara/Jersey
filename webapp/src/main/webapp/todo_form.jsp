@@ -14,6 +14,7 @@
 <body>
 	<nav class="navbar navbar-inverse">
 		<div class="navbar-header">
+			<a class="navbar-brand" href="index.jsp">Home</a>
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
 				<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
 			</button>
