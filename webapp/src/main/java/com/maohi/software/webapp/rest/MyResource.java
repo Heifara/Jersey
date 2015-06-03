@@ -1,4 +1,4 @@
-package com.maohi.software.webapp;
+package com.maohi.software.webapp.rest;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
