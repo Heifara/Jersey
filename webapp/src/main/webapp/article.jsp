@@ -30,6 +30,12 @@
     				 <source src="http://html5demos.com/assets/dizzy.ogv" type="video/ogg">
   				</video>
 			</div>
+			<div class="meta-datas">
+				<span class="glyphicon glyphicon-comment"></span>
+				<span class="datas">3 commentaires</span>
+				<span class="glyphicon glyphicon-thumbs-up"></span>
+				<span class="datas">4 likes</span>
+			</div>
 		</div>
 		
 		<div class="article">
@@ -37,6 +43,12 @@
 			<h2>Un example d'article</h2>
 			<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 			<a href="">Voir l'article -></a>
+			<div class="meta-datas">
+				<span class="glyphicon glyphicon-comment"></span>
+				<span class="datas">3 commentaires</span>
+				<span class="glyphicon glyphicon-thumbs-up"></span>
+				<span class="datas">4 likes</span>
+			</div>
 		</div>
 		
 		<div class="article">
@@ -44,6 +56,12 @@
 			<h2>Un example d'article</h2>
 			<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 			<a href="">Voir l'article -></a>
+			<div class="meta-datas">
+				<span class="glyphicon glyphicon-comment"></span>
+				<span class="datas">3 commentaires</span>
+				<span class="glyphicon glyphicon-thumbs-up"></span>
+				<span class="datas">4 likes</span>
+			</div>
 		</div>
 		
 		
