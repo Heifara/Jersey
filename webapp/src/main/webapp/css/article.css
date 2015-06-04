@@ -76,3 +76,55 @@ body {
 	font-weight: bold;
 	cursor: pointer;
 }
+
+.tagsphere-holder{
+	position:relative;
+	border-width:0px;
+}
+
+#tagsphere-holder1 {
+	width: 120px !important;
+	margin-top: -50px !important;
+}
+
+.tstag{
+	cursor:pointer;
+	position: absolute;
+	border-radius:5px;
+	font-family:Georgia;
+	font-weight:normal;
+    -webkit-transition: .1s ease-in-out;
+    -moz-transition: .1s ease-in-out;
+    -o-transition: .1s ease-in-out;
+    transition: .1s ease-in-out;
+}
+.tstag:hover{
+	color:#000;
+	background-color:rgba(0,0,0,.1);
+	border:2px dashed #777;
+}
+.tstag a{
+	-webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+	text-decoration:none;
+	color:black;
+}
+
+.sidebar {
+	position: fixed;
+  	right: 12%;
+}
+
+.sidebar .search {
+	margin-top: 140px;
+	margin-left: 30px;
+	background: #fff url("http://www.finansemble.fr/static/images/icons/loupe.png") 5px center no-repeat;
+	color: #0088CC;
+	padding-left: 30px;
+}
+
+.sidebar h2 {
+	font-size: 18px;
+	margin-left: 30px;
+}
+

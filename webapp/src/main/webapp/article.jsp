@@ -9,6 +9,8 @@
 <title>Jersey with Bootstrap</title>
 <jsp:include page="bootstrap.jsp" />
 <link rel="stylesheet" href="css/article.css" />
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/tagsphere.js"></script>
 </head>
 <body>
 	<jsp:include page="navbar.jsp" />
@@ -66,7 +68,29 @@
 		
 		
 	</div>
-
+	<div class="sidebar">
+		<div class="form-group">
+          <input type="text" class="form-control search" placeholder="Search">
+        </div>
+		<h2>Nuage de tags</h2>
+		<div id="tagsphere-holder1" class="tagsphere-holder">
+			<ul class="tagsphere">
+				<li><a href="">News</a></li>
+				<li><a href="">Actualité</a></li>
+				<li><a href="">Sport</a></li>
+				<li><a href="">Cuisine</a></li>
+				<li><a href="">Sexe</a></li>
+				<li><a href="">Pornhub</a></li>
+				<li><a href="">Micronix</a></li>
+				<li><a href="">Test</a></li>
+			</ul>
+		</div>
+		<script>
+			var ts_style = {border: true, mousespeed: 1.3, size:240, smallestsize:40, biggestsize:45, clicktostart:true};
+			var ts = $tagsphere("tagsphere-holder1", ts_style);
+			jQuery("#clicktostart").click();
+		</script>
+	</div>
 	<jsp:include page="scripts.jsp" />
 </body>
 </html>
