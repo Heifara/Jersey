@@ -11,7 +11,7 @@
 <jsp:include page="scripts.jsp" />
 <link rel="stylesheet" href="css/article.css" />
 </head>
-<body>
+<body onresize="detectmob();">
 	<jsp:include page="navbar.jsp" />
 
 	<h1>Actualité</h1>
