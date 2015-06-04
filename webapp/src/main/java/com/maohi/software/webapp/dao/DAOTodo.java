@@ -13,7 +13,7 @@ import com.maohi.software.webapp.jaxb2.Todo;
  * @author heifara
  *
  */
-public class DAOTodo {	
+public class DAOTodo {
 
 	public static DAOTodo getInstance() {
 		if (singleton == null) {
@@ -38,11 +38,15 @@ public class DAOTodo {
 		return todos.containsKey(id);
 	}
 
-	public Collection<Todo> selectAll() {
-		return todos.values();
+	public Todo get(String aId) {
+		return todos.get(aId);
 	}
 
 	public void insert(String id, Todo aTodo) {
 		todos.put(id, aTodo);
+	}
+
+	public Collection<Todo> selectAll() {
+		return todos.values();
 	}
 }

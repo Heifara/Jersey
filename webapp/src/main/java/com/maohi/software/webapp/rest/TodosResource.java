@@ -48,15 +48,6 @@ public class TodosResource {
 		return String.valueOf(count);
 	}
 
-	// Defines that the next path parameter after todos is
-	// treated as a parameter and passed to the TodoResources
-	// Allows to type http://localhost:8080/de.vogella.jersey.todo/rest/todos/1
-	// 1 will be treaded as parameter todo and passed to TodoResource
-	@Path("{todo}")
-	public TodoResource getTodo(@PathParam("todo") String id) {
-		return new TodoResource(uriInfo, request, id);
-	}
-
 	// Return the list of todos for applications
 	@GET
 	@Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
@@ -66,6 +57,13 @@ public class TodosResource {
 		return todos;
 	}
 
+	@GET
+	@Path("{id}")
+	@Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
+	public Todo getTodo(@PathParam("id") String aId) {
+		return DAOTodo.getInstance().get(aId);
+	}
+
 	// Return the list of todos to the user in the browser
 	@GET
 	@Produces(MediaType.TEXT_XML)
@@ -73,6 +71,18 @@ public class TodosResource {
 		List<Todo> todos = new ArrayList<Todo>();
 		todos.addAll(DAOTodo.getInstance().selectAll());
 		return todos;
+	}
+
+	@GET
+	@Path("{id}/{summary}/{description}")
+	@Produces(MediaType.TEXT_HTML)
+	public void newTodo(@Context HttpServletResponse aServletResponse, @PathParam("id") String aId, @PathParam("summary") String aSummary, @PathParam("description") String aDescription) throws IOException {
+		Todo iTodo = new Todo();
+		iTodo.setSummary(aSummary);
+		iTodo.setDescription(aDescription);
+		DAOTodo.getInstance().insert(aId, iTodo);
+
+		aServletResponse.sendRedirect("/webapp/todo_form.jsp");
 	}
 
 	@POST
@@ -86,7 +96,7 @@ public class TodosResource {
 		}
 		DAOTodo.getInstance().insert(id, iTodo);
 
-		servletResponse.sendRedirect("../webresources/todos");
+		servletResponse.sendRedirect("/webapp/todo_form.jsp");
 	}
 
 }

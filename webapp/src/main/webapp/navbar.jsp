@@ -10,6 +10,7 @@
 			<ul class="nav navbar-nav">
 				<li><a href="webresources/todo"> Jersey resource</a></li>
 				<li><a href="todo_form.jsp">Formulaire Todo</a></li>
+				<li><a href="article.jsp">Article</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="http://jersey.java.net">Jersey</a></li>
