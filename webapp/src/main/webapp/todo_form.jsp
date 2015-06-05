@@ -8,7 +8,7 @@
 <meta name="author" content="Heifara MATAPO" />
 <link rel="icon" href="images/app.ico" />
 <title>Form to create a new resource</title>
-<jsp:include page="bootstrap.jsp" />
+<jsp:include page="common-head.jsp" />
 </head>
 <body>
 	<jsp:include page="navbar.jsp" />
@@ -21,6 +21,5 @@
 		<br /> <input type="submit" value="Submit" />
 	</form>
 
-	<jsp:include page="scripts.jsp" />
 </body>
 </html>

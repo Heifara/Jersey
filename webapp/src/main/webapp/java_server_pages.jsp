@@ -8,7 +8,7 @@
 <meta name="author" content="Heifara MATAPO" />
 <link rel="icon" href="images/app.ico" />
 <title>Learning JSP</title>
-<jsp:include page="bootstrap.jsp" />
+<jsp:include page="common-head.jsp" />
 <link rel="stylesheet" href="css/java_server_pages.css" />
 </head>
 <body>
@@ -17,7 +17,6 @@
 	<jsp:include page="jsp_declarations.jsp" />
 	<jsp:include page="jsp_expression.jsp" />
 	<jsp:include page="jsp_actions.jsp" />
-	<jsp:include page="scripts.jsp" />
 	<jsp:include page="jsp_control_flow_statements.jsp" />
 </body>
 </html>

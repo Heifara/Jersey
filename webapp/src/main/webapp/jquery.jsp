@@ -8,8 +8,7 @@
 <meta name="author" content="Heifara MATAPO" />
 <link rel="icon" href="images/app.ico" />
 <title>JQuery with JSP</title>
-<jsp:include page="bootstrap.jsp" />
-<jsp:include page="scripts.jsp" />
+<jsp:include page="common-head.jsp" />
 <script type="text/javascript">
 	$(document).ready(function($) {
 		'use strict';

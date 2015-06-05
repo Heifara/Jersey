@@ -7,8 +7,7 @@
 <meta name="author" content="Heifara MATAPO" />
 <link rel="icon" href="images/app.ico" />
 <title>Jersey with Bootstrap</title>
-<jsp:include page="bootstrap.jsp" />
-<jsp:include page="scripts.jsp" />
+<jsp:include page="common-head.jsp" />
 <link rel="stylesheet" href="css/article.css" />
 </head>
 <body onresize="detectmob();">
