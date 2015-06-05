@@ -48,21 +48,23 @@ public class TodosResource {
 		return String.valueOf(count);
 	}
 
+	// retuns the number of todos
+	// Use http://localhost:8080/de.vogella.jersey.todo/rest/todos/count
+	// to get the total number of records
+	@GET
+	@Path("count")
+	@Produces(MediaType.TEXT_HTML)
+	public String getCountHTML() {
+		int count = DAOTodo.getInstance().count();
+		return "<strong>" + String.valueOf(count) + "</strong>";
+	}
+
 	@POST
 	@Path("count")
 	@Produces(MediaType.TEXT_PLAIN)
 	public String getCountPost() {
 		int count = DAOTodo.getInstance().count();
 		return String.valueOf(count);
-	}
-
-	// Return the list of todos for applications
-	@GET
-	@Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
-	public List<Todo> getTodos() {
-		List<Todo> todos = new ArrayList<Todo>();
-		todos.addAll(DAOTodo.getInstance().selectAll());
-		return todos;
 	}
 
 	@GET
@@ -77,6 +79,15 @@ public class TodosResource {
 	@Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
 	public Todo getTodoPost(@FormParam("id") String aId) {
 		return DAOTodo.getInstance().get(aId);
+	}
+
+	// Return the list of todos for applications
+	@GET
+	@Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
+	public List<Todo> getTodos() {
+		List<Todo> todos = new ArrayList<Todo>();
+		todos.addAll(DAOTodo.getInstance().selectAll());
+		return todos;
 	}
 
 	// Return the list of todos to the user in the browser
@@ -101,9 +112,9 @@ public class TodosResource {
 	}
 
 	@POST
-	@Produces(MediaType.TEXT_HTML)
+	@Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-	public void newTodo(@FormParam("id") String id, @FormParam("summary") String summary, @FormParam("description") String description, @Context HttpServletResponse servletResponse) throws IOException {
+	public Todo newTodo(@FormParam("id") String id, @FormParam("summary") String summary, @FormParam("description") String description, @Context HttpServletResponse servletResponse) throws IOException {
 		Todo iTodo = new Todo();
 		iTodo.setSummary(summary);
 		if (description != null) {
@@ -111,7 +122,7 @@ public class TodosResource {
 		}
 		DAOTodo.getInstance().insert(id, iTodo);
 
-		servletResponse.sendRedirect("/webapp/todo_form.jsp");
+		return iTodo;
 	}
 
 }
