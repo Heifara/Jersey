@@ -48,6 +48,14 @@ public class TodosResource {
 		return String.valueOf(count);
 	}
 
+	@POST
+	@Path("count")
+	@Produces(MediaType.TEXT_PLAIN)
+	public String getCountPost() {
+		int count = DAOTodo.getInstance().count();
+		return String.valueOf(count);
+	}
+
 	// Return the list of todos for applications
 	@GET
 	@Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
@@ -61,6 +69,13 @@ public class TodosResource {
 	@Path("{id}")
 	@Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
 	public Todo getTodo(@PathParam("id") String aId) {
+		return DAOTodo.getInstance().get(aId);
+	}
+
+	@POST
+	@Path("{id}")
+	@Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
+	public Todo getTodoPost(@FormParam("id") String aId) {
 		return DAOTodo.getInstance().get(aId);
 	}
 
