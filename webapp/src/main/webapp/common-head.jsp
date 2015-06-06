@@ -3,8 +3,10 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/tagsphere.js"></script>
 <script type="text/javascript" src="js/responsive.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
 
 <!-- CSS -->
 <link rel="stylesheet" href="css/bootstrap.min.css" />
 <link rel="stylesheet" href="css/bootstrap-theme.css" />
 <link rel="stylesheet" href="css/main.css" />
+

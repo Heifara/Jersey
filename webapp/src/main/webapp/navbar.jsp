@@ -23,6 +23,9 @@
 				<li>
 					<a href="jquery.jsp">JQuery</a>
 				</li>
+				<li>
+					<a href="angularjs.jsp">Angular JS</a>
+				</li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown">
